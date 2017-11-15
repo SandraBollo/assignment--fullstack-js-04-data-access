@@ -23,8 +23,8 @@ The goal of this assignment is to return data from the `job` and `companies` tab
 In order to return data from the database, the schema needs to be declared with migrations and the data needs to be seeded *into* the database.
 
 Here is a link to the sample data that you will use to seed:
-  - [jobs data](seeddata/companiesData.js)
-  - [companies data](seeddata/companiesData.js)
+  - [jobs data](https://github.com/muktek/assignment--fullstack-js-04-data-access/blob/master/seeddata/jobsData.js)
+  - [companies data](https://github.com/muktek/assignment--fullstack-js-04-data-access/blob/master/seeddata/companiesData.js)
 
 
 ### Requirements
@@ -46,14 +46,14 @@ In order to complete this assignment, you will need to:
 
 - [x] **create schema w/ database migrations**
   + database migrations allow you to create tables and table schema on the db
-  + you should create both the 'up' + 'down' migrations
   + you should create a migration to create the `job` table and the `job` table's schema
-  + you should create a migration to create the `company` table and the `job` table's schema.
+    ``
+  + you should create a migration to create the `company` table and the `company` table's schema.
+  + you should create both the 'up' + 'down' migrations
   + execute database migrations
-    - Migration commands:
-      - `knex migrate:make «migrationName»` - create a new migration file
-      - `knex migrate:latest` - updates schema by migrating to latest migration file
-      - `knex migrate:rollback` - reverts to original schema (no schema)
+    - `knex migrate:latest` - updates schema by migrating to latest migration file
+    - `knex migrate:rollback` - reverts to original schema (no schema)
+    - (both latest and rollback commands should work -- the 'up' and 'down' migrations are written correctly)
 
 - [x] **Create seed data**
   - create seed files
