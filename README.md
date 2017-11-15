@@ -31,8 +31,8 @@ Here is a link to the sample data that you will use to seed:
 In order to complete this assignment, you will need to:
 
 
-- [x] **Create a Local DB**
-  + create a new MySQL database locally
+- [x] **Create a local MySQL database**
+  + [link to instructions](_mysqlnewdb.md)
 
 - [x] **Install dependencies**
   - mysql2 and knex
