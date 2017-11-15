@@ -1,4 +1,4 @@
-# Full Stack JS Project
+# Full Stack JS Project - Data Access
 **`fullstack-js-04-data-access`**
 
 
@@ -40,7 +40,7 @@ In order to complete this assignment, you will need to:
   npm install --save knex mysql2
   ```
 
-- [x] **Create files/folder**
+- [x] **Create relevant files/folders**
   + add a `databases/` directory to `src/`
   + add a `dbConnect.js` file to `src/databases/`
   + add a `seeds/` directory to `src/databases/`
