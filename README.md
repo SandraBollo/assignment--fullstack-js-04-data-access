@@ -40,11 +40,18 @@ In order to complete this assignment, you will need to:
   npm install --save knex mysql2
   ```
 
-- [x] **configure knex**
+- [x] **Create files/folder**
+  + add a `databases/` directory to `src/`
+  + add a `dbConnect.js` file to `src/databases/`
+  + add a `seeds/` directory to `src/databases/`
+  + add a `migrations/` directory to `src/databases`
+
+- [x] **Configure knex**
   + configure the `knexfile.js` at the root of your project to connect to it.
   - see [`knexfile.js` config example](./knexfile.js)
 
-- [x] **create schema w/ database migrations**
+
+- [x] **Create schema w/ database migrations**
   + database migrations allow you to create tables and table schema on the db
   + you should create a migration to create the `job` table and the `job` table's schema
     ``
