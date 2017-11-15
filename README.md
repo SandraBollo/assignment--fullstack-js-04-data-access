@@ -31,20 +31,20 @@ Here is a link to the sample data that you will use to seed:
 In order to complete this assignment, you will need to:
 
 
-- [ ] **Create a Local DB**
+- [x] **Create a Local DB**
   + create a new MySQL database locally
 
-- [ ] **Install dependencies**
+- [x] **Install dependencies**
   - mysql2 and knex
   ```
   npm install --save knex mysql2
   ```
 
-- [ ] **configure knex**
+- [x] **configure knex**
   + configure the `knexfile.js` at the root of your project to connect to it.
   - see [`knexfile.js` config example](./knexfile.js)
 
-- [ ] **create schema w/ database migrations**
+- [x] **create schema w/ database migrations**
   + database migrations allow you to create tables and table schema on the db
   + you should create both the 'up' + 'down' migrations
   + you should create a migration to create the `job` table and the `job` table's schema
@@ -55,20 +55,20 @@ In order to complete this assignment, you will need to:
       - `knex migrate:latest` - updates schema by migrating to latest migration file
       - `knex migrate:rollback` - reverts to original schema (no schema)
 
-- [ ] **Create seed data**
+- [x] **Create seed data**
   - create seed files
     - Seed commands
       - `knex seed:make «seedName»` - create a seed file
       - `knex seed:run` - execute seed files to populate database
   -  execute seed the tables in the database with sample data
 
-- [ ] **Create a connection to the db in application** (`server.js`)
+- [x] **Create a connection to the db in application** (`server.js`)
   + configure the express app's connection to the db.
   + you should use a `dbConnect.js` in the `src/database/` directory
   + pass the db connection to `app.locals.db` to give the application universal access to the db connection.
 
 
-- [ ] **Query data in `apiRouter.js`**
+- [x] **Query data in `apiRouter.js`**
   + access the db connection in `req.app.locals.db`
   + for `api/jobs`
     - use knex to query the db's `job` table and return data as JSON in the server's response
@@ -97,12 +97,12 @@ git checkout -b part-04-data-access
 
 **Installation Checklist**
 
-- [ ] **Have mysql-server installed**
+- [x] **Have mysql-server installed**
   - (`sudo service myqsl start` will confirm)
   - [link to mysql-serve install instructions](mysqlserverconfig.md)
 
-- [ ] **You have created a MYSQL user**
+- [x] **You have created a MYSQL user**
   - [link to instructions](_mysqluserconfig.md)
 
-- [ ] **Have knex installed globally**
+- [x] **Have knex installed globally**
   - `npm install -g knex`
