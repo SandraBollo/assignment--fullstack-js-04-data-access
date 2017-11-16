@@ -35,9 +35,9 @@ In order to complete this assignment, you will need to:
   + [link to instructions](_mysqlnewdb.md)
 
 - [x] **Install dependencies**
-  - mysql2 and knex
-  ```
-  npm install --save knex mysql2
+  - mysql and knex
+  ```sh
+  npm install --save knex mysql
   ```
 
 - [x] **Create relevant files/folders**
