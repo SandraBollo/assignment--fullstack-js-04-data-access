@@ -2,14 +2,14 @@
 
 #### Create db and db user:
 
-+ put the project name inside the `"......"`
++ Enter Postgres client
 ```
 sudo -u postgres psql postgres
 ````
 
-+ *Note:* this command will have your mysql user create the database
++ *Note:* this command will have your
 ```
 postgres=# CREATE ROLE dba_devjobs WITH LOGIN;
-postgres=# ALTER ROLE dba_devjobs WITH ENCRYPTED PASSWORD;
+postgres=# ALTER ROLE dba_devjobs WITH ENCRYPTED PASSWORD 'passpass';
 postgres=# CREATE DATABASE devjobs OWNER dba_devjobs;
 ```

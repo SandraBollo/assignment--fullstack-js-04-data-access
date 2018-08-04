@@ -31,8 +31,8 @@ Here is a link to the sample data that you will use to seed:
 In order to complete this assignment, you will need to:
 
 
-- [x] **Create a local Postgres database**
-  + [link to instructions](_mysqlnewdb.md)
+- [x] **Create a local Postgres database for project + database user**
+  + [link to instructions for creating new pg s](_pgnewdb.md)
 
 - [x] **Install dependencies**
   - postgres client for node and knex
@@ -52,9 +52,9 @@ In order to complete this assignment, you will need to:
 
 - [x] **Create schema w/ database migrations**
   + database migrations allow you to create tables and table schema on the db
-  + you should create a migration to create the `job` table and the `job` table's schema
+  + you should create a migration to create the `jobs` table and the `jobs` table's schema
     ``
-  + you should create a migration to create the `company` table and the `company` table's schema.
+  + you should create a migration to create the `companies` table and the `companies` table's schema.
   + you should create both the 'up' + 'down' migrations
   + execute database migrations
     - `knex migrate:latest` - updates schema by migrating to latest migration file
@@ -76,14 +76,20 @@ In order to complete this assignment, you will need to:
 
 - [x] **Query data in `apiRouter.js`**
   + access the db connection in `req.app.locals.db`
-  
+
   + for `api/jobs`
-    - use knex to query the db's `job` table and return data as JSON in the server's response
+    - use knex to query the db's `jobs` table and return data as JSON in the server's response
 
   + for `api/companies`
-    - use knex to query the db's `company` table and return data as JSON in the server's response
+    - use knex to query the db's `companies` table and return data as JSON in the server's response
 
 
+
+### Expected Result
+
+- When I navigate to `/api/companies` in the browser, I should receive a json array of objects of company records from the database
+
+- When I navigate to `/api/jobs` in the browser, I should receive a json array of objects of jobs records from the database
 
 
 ## Setup Instructions
@@ -96,20 +102,20 @@ cd ~/Documents/muktek/assignments/project--devjobs
 
 # (2) Commit your changes from the previous demo
 git commit -m 'committing work from part-03'
+git checkout master
+git merge part-03-views
 
 # (3) You will work on the part-04-views branch for this feature
 git checkout -b part-04-data-access
 
 ```
 
+
 **Installation Checklist**
 
-- [x] **Have mysql-server installed**
-  - (`sudo service myqsl start` will confirm)
-  - [link to mysql-serve install instructions](mysqlserverconfig.md)
-
-- [x] **You have created a MYSQL user**
-  - [link to instructions](_mysqluserconfig.md)
+- [x] **Have postgres installed**
+  - (`sudo service postgressql start` will start)
+  - `sudo -u postgres psql postgres`
 
 - [x] **Have knex installed globally**
   - `npm install -g knex`
