@@ -1,19 +1,12 @@
-## MySQL Servr Config
+## Postgresql Server Config
 
-#### (1) Install MySQL-Server
+#### (1) Install 
 ```
 sudo apt-get update
-sudo apt-get install mysql-server
+sudo apt-get install postgresql
 ```
 
-#### (2) Configure  MySQL-Server service for proper directory
-
+#### (2) Start  MySQL-Server
 ```sh
-sudo service mysql stop
-sudo usermod -d /var/lib/mysql mysql
-```
-
-#### (3) Start  MySQL-Server
-```sh
-sudo service mysql start
+sudo service postgresql start
 ```

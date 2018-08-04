@@ -1,8 +1,8 @@
 const devConfig = {
-  client: 'mysql2',
+  client: 'pg',
   connection: {
     host : '127.0.0.1',
-    port: '3306',
+    port: '5432',
     user : '...DB USERNAME...',
     password : '...DB USERNAME PASSWORD...',
     database : '...DB NAME...'

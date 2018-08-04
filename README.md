@@ -31,18 +31,17 @@ Here is a link to the sample data that you will use to seed:
 In order to complete this assignment, you will need to:
 
 
-- [x] **Create a local MySQL database**
+- [x] **Create a local Postgres database**
   + [link to instructions](_mysqlnewdb.md)
 
 - [x] **Install dependencies**
-  - mysql and knex
+  - postgres client for node and knex
   ```sh
-  npm install --save knex mysql
+  npm install --save knex pg
   ```
 
 - [x] **Create relevant files/folders**
-  + add a `databases/` directory to `src/`
-  + add a `dbConnect.js` file to `src/databases/`
+  + add a `database/` directory to `src/`
   + add a `seeds/` directory to `src/databases/`
   + add a `migrations/` directory to `src/databases`
 
@@ -77,6 +76,7 @@ In order to complete this assignment, you will need to:
 
 - [x] **Query data in `apiRouter.js`**
   + access the db connection in `req.app.locals.db`
+  
   + for `api/jobs`
     - use knex to query the db's `job` table and return data as JSON in the server's response
 
