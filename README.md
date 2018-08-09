@@ -18,12 +18,11 @@ You are going to build a full stack web application with node.js + React. In ord
 For this assignment, we will focus on enabling **data access** in our application to a remote database. With the `/api` routes + data access, we will be have our own API for accessing and storing application data.
 
 ###  Overview
-The goal of this assignment is to return data from the `job` and `companies` tables in a database as JSON when the user goes accesses the `api/jobs` and `api/companies` routes.  
+The goal of this assignment is to generate the table schema, seed the data, and query for records from the  `companies` tables in the application database. When the user accesses  the `api/companies` routes, the companies data should be returned as JSON.  
 
 In order to return data from the database, the schema needs to be declared with migrations and the data needs to be seeded *into* the database.
 
-Here is a link to the sample data that you will use to seed:
-  - [jobs data](https://github.com/muktek/assignment--fullstack-js-04-data-access/blob/master/seeddata/jobsData.js)
+Here is a link to the sample data for the companies that you will use to seed:
   - [companies data](https://github.com/muktek/assignment--fullstack-js-04-data-access/blob/master/seeddata/companiesData.js)
 
 
@@ -32,7 +31,7 @@ In order to complete this assignment, you will need to:
 
 
 - [x] **Create a local Postgres database for project + database user**
-  + [link to instructions for creating new pg s](_pgnewdb.md)
+  + [link to instructions for creating new postgres database](_pgnewdb.md)
 
 - [x] **Install dependencies**
   - postgres client for node and knex
@@ -77,9 +76,6 @@ In order to complete this assignment, you will need to:
 - [x] **Query data in `apiRouter.js`**
   + access the db connection in `req.app.locals.db`
 
-  + for `api/jobs`
-    - use knex to query the db's `jobs` table and return data as JSON in the server's response
-
   + for `api/companies`
     - use knex to query the db's `companies` table and return data as JSON in the server's response
 
@@ -89,7 +85,6 @@ In order to complete this assignment, you will need to:
 
 - When I navigate to `/api/companies` in the browser, I should receive a json array of objects of company records from the database
 
-- When I navigate to `/api/jobs` in the browser, I should receive a json array of objects of jobs records from the database
 
 
 ## Setup Instructions
