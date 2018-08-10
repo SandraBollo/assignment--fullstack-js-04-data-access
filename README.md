@@ -49,13 +49,20 @@ In order to complete this assignment, you will need to:
   - see [`knexfile.js` config example](./knexfile.js)
 
 
-- [x] **Create schema w/ database migrations**
-  + database migrations allow you to create tables and table schema on the db
-  + you should create a migration to create the `jobs` table and the `jobs` table's schema
-    ``
+- [x] **Generate companies table w/ a database migration**
   + you should create a migration to create the `companies` table and the `companies` table's schema.
-  + you should create both the 'up' + 'down' migrations
-  + execute database migrations
+    - `knex migrate:make « description_of_migration »`
+  + `companies` table columns:
+
+    ```
+    title         -   string
+    description   -   text
+    location      -   string
+    image_link    -   string
+    ```
+  +  you should create both the 'up' (creates the table) + 'down' (drops the table) migrations
+
+- [x] **Execute database migrations**
     - `knex migrate:latest` - updates schema by migrating to latest migration file
     - `knex migrate:rollback` - reverts to original schema (no schema)
     - (both latest and rollback commands should work -- the 'up' and 'down' migrations are written correctly)
@@ -70,7 +77,7 @@ In order to complete this assignment, you will need to:
 - [x] **Create a connection to the db in application** (`server.js`)
   + configure the express app's connection to the db.
   + you should use a `dbConnect.js` in the `src/database/` directory
-  + pass the db connection to `app.locals.db` to give the application universal access to the db connection.
+  + pass the db connection to `app.locals.db` to give the routes access to the db connection on the `req` object.
 
 
 - [x] **Query data in `apiRouter.js`**
@@ -78,7 +85,6 @@ In order to complete this assignment, you will need to:
 
   + for `api/companies`
     - use knex to query the db's `companies` table and return data as JSON in the server's response
-
 
 
 ### Expected Result
