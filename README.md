@@ -55,6 +55,7 @@ In order to complete this assignment, you will need to:
   + `companies` table columns:
 
     ```
+    id            -   integer
     title         -   string
     description   -   text
     location      -   string
